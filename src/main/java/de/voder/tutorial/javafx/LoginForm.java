@@ -64,7 +64,7 @@ public class LoginForm extends Application {
 
 			@Override
 			public void handle(ActionEvent ev) {
-				LOGGER.info("Button clicked: " + ev);
+				LOGGER.fine("Button clicked: " + ev);
 				targetText.setFill(Color.FIREBRICK);
 				targetText.setText("Login failed!");
 			}
