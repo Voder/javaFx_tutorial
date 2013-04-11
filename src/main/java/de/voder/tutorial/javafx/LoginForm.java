@@ -42,10 +42,10 @@ public class LoginForm extends Application {
 		Label username = new Label("User Name:");
 		grid.add(username, 0, 1);
 		
-		TextField userTf = new TextField();
+		final TextField userTf = new TextField();
 		grid.add(userTf, 1, 1);
 		
-		Label password = new Label("User Name:");
+		Label password = new Label("Password:");
 		grid.add(password, 0, 2);
 		
 		PasswordField pwdTf = new PasswordField();
@@ -66,7 +66,7 @@ public class LoginForm extends Application {
 			public void handle(ActionEvent ev) {
 				LOGGER.fine("Button clicked: " + ev);
 				targetText.setFill(Color.FIREBRICK);
-				targetText.setText("Login failed!");
+				targetText.setText("Login failed!\nUser '" + userTf.getText() + "' not known.");
 			}
 		});
 		// define scene
